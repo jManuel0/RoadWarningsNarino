@@ -1,0 +1,34 @@
+### 1. Crear una alerta (POST)
+POST http://localhost:3000/api/alerts
+Content-Type: application/json
+
+{
+  "type": "deslizamiento",
+  "location": "Vía Pasto - Ipiales",
+  "severity": "alta",
+  "description": "Bloqueo total por derrumbe"
+}
+
+### 2. Listar todas las alertas (GET)
+GET http://localhost:3000/api/alerts
+
+### 3. Obtener una alerta por ID (GET)
+# 👇 reemplaza {{id}} con el ID real que te devuelva la creación en el paso 1
+GET http://localhost:3000/api/alerts/REPLACE_WITH_ACTUAL_ID
+
+### 4. Editar una alerta existente (PUT)
+# 👇 usa el mismo ID real
+PUT http://localhost:3000/api/alerts/REPLACE_WITH_ACTUAL_ID
+Content-Type: application/json
+
+{
+  "type": "deslizamiento",
+  "location": "Vía Pasto - Ipiales",
+  "severity": "media",
+  "description": "Ya se habilitó un carril"
+}
+
+### 5. Eliminar una alerta (DELETE)
+# 👇 usa el mismo ID real
+DELETE http://localhost:3000/api/alerts/REPLACE_WITH_ACTUAL_ID
+
